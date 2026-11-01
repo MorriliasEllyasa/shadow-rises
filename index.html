@@ -514,12 +514,22 @@ footer { margin-top:0; }
     .shadow-card:focus-visible{outline:2px solid #d6b8ff;outline-offset:4px}
     @media(max-width:480px){.shadow-board{gap:7px}.shadow-card{border-radius:7px}}
     @media(prefers-reduced-motion:reduce){.shadow-card,.shadow-card-inner,.shadow-start-button,.shadow-secondary-button{transition:none}}.shadow-overlay{position:absolute;z-index:5;inset:0;display:grid;place-items:center;padding:20px;background:#090711d9;backdrop-filter:blur(8px)}.shadow-overlay-card{width:min(100%,420px);padding:25px;border:1px solid #7650a4;border-radius:16px;text-align:center;background:linear-gradient(145deg,#21172f,#090711);box-shadow:0 0 45px #9B6DFF22}.shadow-overlay-card h4{font-size:25px;color:#F0EAFB;margin:10px 0}.shadow-overlay-card p{margin:0 auto 12px}.shadow-footnote{font-size:11px;line-height:1.6;color:#9488a8;margin:17px 0 0;text-align:center}
-    .shadow-audio-controls{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:16px 0;padding:13px 15px;border:1px solid #49365f;border-radius:12px;background:#090711aa}
-    .shadow-audio-toggle,.shadow-volume-control{display:flex;align-items:center;gap:9px;color:#d8cde8;font-size:12px;font-weight:750}
-    .shadow-audio-toggle input{width:17px;height:17px;accent-color:#C4A0FF}
-    .shadow-audio-toggle strong,.shadow-volume-control strong{color:#C4A0FF;min-width:38px}
-    .shadow-volume-control input{width:clamp(100px,22vw,180px);accent-color:#C4A0FF}
-    @media(max-width:480px){.shadow-audio-controls{align-items:flex-start;flex-direction:column}.shadow-volume-control{width:100%;flex-wrap:wrap}.shadow-volume-control input{flex:1}}
+    /* Audio Control: artwork is a decorative frame; controls remain responsive and functional. */
+    .shadow-audio-controls{position:relative;width:100%;min-height:clamp(104px,12vw,142px);margin:16px 0 20px;box-sizing:border-box;background:url('assets/audio-control/panel_audio_control.png') center/100% 100% no-repeat;display:flex;align-items:center;justify-content:center;padding:0 8%;}
+    .shadow-audio-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(12px,3vw,30px);position:relative;z-index:1;}
+    .shadow-audio-toggle{display:flex;align-items:center;gap:10px;min-width:0;color:#e9ddff;font-size:clamp(11px,1.4vw,13px);font-weight:800;letter-spacing:.5px;cursor:pointer;}
+    .shadow-audio-toggle input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none;}
+    .shadow-audio-toggle img{width:clamp(34px,4.4vw,48px);height:clamp(34px,4.4vw,48px);object-fit:contain;filter:drop-shadow(0 0 5px #8f4cff66);}
+    .shadow-audio-toggle strong,.shadow-volume-control strong{color:#d7baff;min-width:30px;font-size:11px;text-shadow:0 0 8px #9b6dff88;}
+    .shadow-volume-control{display:flex;align-items:center;gap:10px;min-width:0;color:#e9ddff;font-size:clamp(10px,1.3vw,12px);font-weight:800;}
+    .shadow-slider-wrap{position:relative;width:clamp(115px,25vw,230px);height:30px;display:flex;align-items:center;flex:0 1 230px;}
+    .shadow-slider-frame{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;pointer-events:none;}
+    .shadow-slider-fill{position:absolute;left:3%;top:50%;height:42%;width:var(--volume-fill,50%);max-width:94%;transform:translateY(-50%);object-fit:fill;pointer-events:none;}
+    .shadow-volume-control input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer;z-index:3;}
+    .shadow-slider-wrap::after{content:'';position:absolute;left:var(--volume-position,50%);top:50%;width:25px;height:25px;transform:translate(-50%,-50%);background:url('assets/audio-control/slider_knob.png') center/contain no-repeat;filter:drop-shadow(0 0 4px #a56cff99);pointer-events:none;z-index:2;}
+    .shadow-audio-toggle:focus-within,.shadow-volume-control:focus-within{outline:1px solid #c4a0ff;outline-offset:5px;border-radius:5px}
+    @media(max-width:560px){.shadow-audio-controls{min-height:142px;padding:0 10%;background-size:100% 100%;}.shadow-audio-inner{gap:5px;flex-direction:column;justify-content:center;align-items:center}.shadow-audio-toggle{gap:7px}.shadow-audio-toggle img{width:30px;height:30px}.shadow-volume-control{gap:7px;width:100%;justify-content:center}.shadow-slider-wrap{width:min(48vw,190px);flex:0 1 190px;height:26px}.shadow-slider-wrap::after{width:22px;height:22px}}
+    @media(prefers-reduced-motion:reduce){.shadow-slider-wrap::after{filter:none}}
     @media(max-width:480px){.shadow-game-top{flex-direction:column}.shadow-game-top .shadow-secondary-button{align-self:flex-start}.shadow-board{gap:7px}.shadow-card{border-radius:9px}.shadow-stats{gap:7px}.shadow-stats>div{padding:10px 8px}}
     @media(prefers-reduced-motion:reduce){.shadow-card,.shadow-start-button,.shadow-secondary-button{transition:none}}
 
@@ -802,8 +812,22 @@ footer { margin-top:0; }
     <section id="shadow-memory-game" class="shadow-game" aria-label="Permainan Shadow Memory" hidden>
       <div class="shadow-game-top"><div><div class="shadow-eyebrow">SHADOW REALM // MEMORY TRIAL</div><h3>SHADOW MEMORY</h3><p>Ingat simbolnya. Temukan pasangannya. Jangan bangunkan cursed core.</p></div><button type="button" id="shadow-exit-button" class="shadow-secondary-button">← Keluar</button></div>
       <div class="shadow-audio-controls" aria-label="Pengaturan audio mini game">
-        <label class="shadow-audio-toggle"><input type="checkbox" id="shadow-music-toggle"> <span>Background Sound</span> <strong id="shadow-music-state">OFF</strong></label>
-        <label class="shadow-volume-control" for="shadow-sfx-volume"><span>Volume Sound Effect</span><input id="shadow-sfx-volume" type="range" min="0" max="100" value="50"><strong id="shadow-sfx-value">50%</strong></label>
+        <div class="shadow-audio-inner">
+          <label class="shadow-audio-toggle" for="shadow-music-toggle">
+            <input type="checkbox" id="shadow-music-toggle">
+            <img id="shadow-music-icon" src="assets/audio-control/icon_speaker_off.png" alt="">
+            <span>BACKGROUND SOUND</span><strong id="shadow-music-state">OFF</strong>
+          </label>
+          <label class="shadow-volume-control" for="shadow-sfx-volume">
+            <span>SFX VOLUME</span>
+            <span class="shadow-slider-wrap" id="shadow-slider-wrap">
+              <img class="shadow-slider-frame" src="assets/audio-control/slider_frame.png" alt="">
+              <img class="shadow-slider-fill" id="shadow-slider-fill" src="assets/audio-control/volume_fill.png" alt="">
+              <input id="shadow-sfx-volume" type="range" min="0" max="100" value="50" aria-label="Volume sound effect">
+            </span>
+            <strong id="shadow-sfx-value">50%</strong>
+          </label>
+        </div>
       </div>
       <div class="shadow-stats"><div><span>SHADOW CORE</span><strong id="shadow-score">0</strong></div><div><span>LEVEL</span><strong id="shadow-level">1</strong></div><div><span>PASANGAN</span><strong id="shadow-pairs">0 / 4</strong></div></div>
       <p id="shadow-message" class="shadow-message" aria-live="polite">Pilih kartu untuk memulai.</p>
@@ -1974,6 +1998,9 @@ document.getElementById('community-cancel-edit').addEventListener('click',()=>{d
   let score=0, level=1, cards=[], opened=[], matched=0, locked=false, running=false, transitionTimer=null, cardResolutionTimer=null, gameSession=0;
   const musicToggle=document.getElementById('shadow-music-toggle');
   const musicState=document.getElementById('shadow-music-state');
+  const musicIcon=document.getElementById('shadow-music-icon');
+  const sliderWrap=document.getElementById('shadow-slider-wrap');
+  const sliderFill=document.getElementById('shadow-slider-fill');
   const sfxVolume=document.getElementById('shadow-sfx-volume');
   const sfxValue=document.getElementById('shadow-sfx-value');
   const audioFiles={reveal:'audio/CardReveal.mp3',match:'audio/Match.mp3',mismatch:'audio/mismatch.mp3',bomb:'audio/cursed%20core.mp3',win:'audio/level_complete.mp3',defeat:'audio/gameover.mp3'};
@@ -1990,7 +2017,11 @@ document.getElementById('community-cancel-edit').addEventListener('click',()=>{d
   function updateAudioControls(){
     musicToggle.checked=backgroundEnabled;
     musicState.textContent=backgroundEnabled?'ON':'OFF';
-    sfxValue.textContent=sfxVolume.value+'%';
+    musicIcon.src=backgroundEnabled?'assets/audio-control/icon_speaker_on.png':'assets/audio-control/icon_speaker_off.png';
+    const volume=Math.max(0,Math.min(100,Number(sfxVolume.value)||0));
+    sfxValue.textContent=volume+'%';
+    sliderWrap.style.setProperty('--volume-fill',Math.max(0,volume*0.94)+'%');
+    sliderWrap.style.setProperty('--volume-position',(3+volume*0.94)+'%');
   }
   function playSfx(kind){
     const src=audioFiles[kind];
