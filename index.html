@@ -407,7 +407,7 @@ footer {
 }
 
 
-/* WORLD ENVY responsive sunset theme + sidebar navigation */
+/* tema ph */
 :root { --bg:#090711; --panel:#171222; --panel2:#29213B; --line:#49365f; --text:#F0EAFB; --muted:#c9bfd9; --red:#C4A0FF; --orange:#9B6DFF; --blue:#C4A0FF; }
 body { background:var(--bg); color:var(--text); }
 header { position:sticky; top:0; z-index:50; justify-content:flex-start; background:#090711ee; border-bottom:1px solid #49365f; backdrop-filter:blur(12px); padding:14px 22px; }
@@ -421,7 +421,7 @@ nav { display:none; }
 .sidebar-heading { color:#C4A0FF; font-size:12px; letter-spacing:2px; font-weight:800; margin:12px 10px 18px; }
 #site-sidebar a { display:block; padding:13px 12px; margin:5px 0; color:#d8cdd1; text-decoration:none; border:1px solid transparent; border-radius:10px; font-weight:700; font-size:14px; }
 #site-sidebar a:hover, #site-sidebar a.active { color:#fff; background:linear-gradient(100deg,#352044,#21172f); border-color:#9B6DFF; }
-/* Event Hub is intentionally highlighted separately from the other sidebar links. */
+/* link url webnya. */
 #site-sidebar a.event-hub-link { position:relative; isolation:isolate; overflow:hidden; border:1px solid #6f4b9a; background:linear-gradient(110deg,#21172f,#39234e,#171222); color:#fff; box-shadow:0 0 14px #9B6DFF22; }
 #site-sidebar a.event-hub-link::before { content:""; position:absolute; z-index:-1; inset:-60% -30%; background:linear-gradient(105deg,transparent 35%,#ffffff18 45%,#C4A0FF55 50%,transparent 62%); transform:translateX(-70%) rotate(8deg); animation:eventHubFlow 5s ease-in-out infinite; pointer-events:none; }
 #site-sidebar a.event-hub-link:hover, #site-sidebar a.event-hub-link.active { border-color:#C4A0FF; box-shadow:0 0 18px #9B6DFF44; }
@@ -449,7 +449,7 @@ footer { margin-top:0; }
 @media(max-width:650px) { header { padding:12px 16px; } .logo { font-size:16px; } .hero { padding:48px 20px 36px; } .content-section { padding:28px 18px 32px; } #admin-panel { padding:25px 18px !important; } }
 @media(prefers-reduced-motion:reduce) { #site-sidebar { transition:none; } }
 
-/* WORLD ENVY sidebar refinement: consistent spacing and icon treatment. */
+/* ikon dan sidebar. */
 #site-sidebar { gap:2px; }
 #site-sidebar .sidebar-heading { margin-bottom:16px; }
 #site-sidebar a.sidebar-link {
@@ -480,7 +480,7 @@ footer { margin-top:0; }
   border:1px solid #49365f; border-radius:15px;
   background:#100d18; box-shadow:0 12px 32px #0004;
 }
-/* THE SHATTERED — display-only event card (not interactive until release). */
+/* THE SHATTERED. */
 #spin-wheel-view .shattered-card-shell{width:min(1050px,100%);margin:0 auto;text-align:center}
 #spin-wheel-view .shattered-card-art{display:block;width:100%;overflow:hidden;border:1px solid #7650a4;border-radius:16px;background:#090711;box-shadow:0 16px 42px #0008,0 0 24px #9B6DFF20;line-height:0}
 #spin-wheel-view .shattered-card-art picture,#spin-wheel-view .shattered-card-art img{display:block;width:100%;height:auto}
@@ -509,7 +509,7 @@ footer { margin-top:0; }
     .admin-subpanel button{padding:10px 13px;border:0;border-radius:8px;background:#a73545;color:#fff;cursor:pointer;font-weight:700}
     @media(max-width:650px){.clan-banner-wrap{width:min(92vw,560px);aspect-ratio:16/9}}
 
-    /* Shadow Rises Event Hub: isolated flowing purple/white/black event marker and event card. */
+    /* Shadow Rises. */
     .event-hub-card{position:relative;isolation:isolate;overflow:hidden;max-width:850px;min-height:220px;border:1px solid #7650a4;border-radius:18px;background:linear-gradient(120deg,#090711 5%,#21172f 45%,#352044 70%,#100D18);box-shadow:0 16px 42px #0007,0 0 24px #9B6DFF18}
     .event-hub-card::before{content:"";position:absolute;z-index:-1;inset:-80% -35%;background:linear-gradient(110deg,transparent 34%,#ffffff10 44%,#C4A0FF35 49%,#9B6DFF22 53%,transparent 64%);animation:eventHubCardFlow 8s ease-in-out infinite}
     .event-hub-card::after{content:"";position:absolute;z-index:-1;width:240px;height:240px;right:-60px;top:-90px;border-radius:50%;background:#9B6DFF1c;filter:blur(25px);animation:eventHubOrb 7s ease-in-out infinite alternate}
@@ -528,7 +528,7 @@ footer { margin-top:0; }
 
     /* Shadow Memory mini-game */
     .shadow-start-button,.shadow-secondary-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;padding:12px 17px;border-radius:10px;border:1px solid #9B6DFF;background:linear-gradient(110deg,#9B6DFF,#C4A0FF);color:#100D18;font-weight:850;cursor:pointer;box-shadow:0 0 18px #9B6DFF24;transition:transform .18s ease,box-shadow .18s ease}
-    /* Ensure the native hidden state wins over display:flex/grid styles. */
+    /* hide teks. */
     #shadow-continue-button[hidden],#shadow-replay-button[hidden],.shadow-overlay[hidden]{display:none !important}
     .shadow-start-button:hover,.shadow-secondary-button:hover{transform:translateY(-2px);box-shadow:0 0 24px #9B6DFF55}
     .shadow-secondary-button{margin:0;background:#171222;color:#F0EAFB;border-color:#49365f;box-shadow:none}
@@ -554,7 +554,7 @@ footer { margin-top:0; }
     .shadow-card:focus-visible{outline:2px solid #d6b8ff;outline-offset:4px}
     @media(max-width:480px){.shadow-board{gap:7px}.shadow-card{border-radius:7px}}
     @media(prefers-reduced-motion:reduce){.shadow-card,.shadow-card-inner,.shadow-start-button,.shadow-secondary-button{transition:none}}.shadow-overlay{position:absolute;z-index:5;inset:0;display:grid;place-items:center;padding:20px;background:#090711e8;backdrop-filter:blur(7px)}.shadow-overlay-card{position:relative;isolation:isolate;width:min(100%,430px);min-height:300px;box-sizing:border-box;padding:25px;border:1px solid #7650a4;border-radius:16px;text-align:center;background:linear-gradient(145deg,#21172f,#090711);box-shadow:0 0 35px #9B6DFF22}.shadow-overlay-card.is-defeat{min-height:390px;padding:150px 25px 25px;background:#0c0815 url('assets/shadow-rises/grimreaper_defeat_ui.png') center 5px/auto 190px no-repeat}.shadow-overlay-card h4{font-size:clamp(19px,4vw,25px);color:#F0EAFB;margin:10px 0}.shadow-overlay-card p{margin:0 auto 12px}.shadow-overlay-card .shadow-defeat-score{font-size:14px;color:#e8d8ff;font-weight:850;letter-spacing:.5px}.shadow-footnote{font-size:11px;line-height:1.6;color:#9488a8;margin:17px 0 0;text-align:center}
-    /* Audio Control: responsive layout with slider artwork aligned to the real range. */
+    /* Audio kontol. */
     .shadow-audio-controls{position:relative;width:100%;min-height:clamp(108px,12vw,144px);margin:16px 0 20px;box-sizing:border-box;background:url('assets/audio-control/panel_audio_control.png') center/100% 100% no-repeat;display:flex;align-items:center;justify-content:center;padding:0 clamp(24px,7%,76px);}
     .shadow-audio-inner{width:100%;display:flex;align-items:center;justify-content:space-between;gap:clamp(14px,3vw,32px);position:relative;z-index:1;}
     .shadow-audio-toggle{display:flex;align-items:center;justify-content:center;gap:10px;min-width:0;color:#e9ddff;font-size:clamp(11px,1.4vw,13px);font-weight:800;letter-spacing:.5px;cursor:pointer;}
@@ -576,7 +576,7 @@ footer { margin-top:0; }
     @media(max-width:560px){.shadow-game-top{align-items:flex-start;flex-direction:column}.shadow-game-top .shadow-secondary-button{align-self:flex-start}.shadow-game-logo{width:min(100%,270px);max-height:88px}.shadow-stats{gap:5px;margin-top:14px}.shadow-stats>div{min-height:72px;padding:14px 5px 9px}.shadow-stats span{font-size:8px;letter-spacing:.7px}.shadow-stats strong{font-size:clamp(15px,4vw,20px)}.shadow-message{min-height:46px;padding:8px 16px;font-size:11px}.shadow-board{gap:7px}.shadow-card{border-radius:9px}.shadow-overlay-card.is-defeat{min-height:360px;padding:140px 16px 20px;background-size:auto 175px}}
     @media(prefers-reduced-motion:reduce){.shadow-card,.shadow-start-button,.shadow-secondary-button{transition:none}}
 
-    /* Community pages: clean, responsive layout while preserving the existing theme. */
+    /* Community pages. */
     #header-copyright{display:none;margin-left:auto;color:#9eacc5;font-size:11px;line-height:1.4;text-align:right;max-width:250px}
     header{display:flex;align-items:center;gap:12px}
     .content-section{max-width:1200px;margin:0 auto;width:100%;box-sizing:border-box}
@@ -623,7 +623,7 @@ footer { margin-top:0; }
 
 
 
-    /* HOME HERO refinement: centered banner with information cards below. */
+    /* HOME HERO. */
     #home-view > .hero {
       padding: clamp(34px, 5vw, 64px) clamp(20px, 5vw, 7%) 42px;
       background: radial-gradient(ellipse at 50% 0%, #29213B 0%, #120e1d 42%, #090711 78%);
@@ -696,7 +696,7 @@ footer { margin-top:0; }
       #home-view .feature-item { min-height: 0; }
     }
   
-/* SHADOW RISES visual corrections: preserve gameplay and event card. */
+/* SHADOW RISES visual. */
 .shadow-game-top{position:relative;display:flex;justify-content:center;align-items:flex-start;min-height:92px;padding:0 94px 0 12px;}
 .shadow-game-brand{width:100%;display:flex;justify-content:center;align-items:center;min-width:0;}
 .shadow-game-logo{width:min(100%,390px);height:auto;max-height:126px;object-fit:contain;object-position:center;margin:0 auto;display:block;}
@@ -727,7 +727,7 @@ footer { margin-top:0; }
 }
 @media(max-width:360px){.shadow-game-top{padding-right:64px}.shadow-game-top #shadow-exit-button{font-size:10px;padding:8px}.shadow-stats>div{min-height:76px}.shadow-stats span{font-size:6px}}
 
-    /* SHADOW RISES refinements: center logo, larger image-only stats, event actions. */
+    /* SHADOW RISES aset. */
     .shadow-game-top{justify-content:center;align-items:center;text-align:center;min-height:0;padding:0;margin:0 auto 4px}
     .shadow-game-brand{width:100%;display:flex;justify-content:center;align-items:center;min-width:0}
     .shadow-game-logo{width:min(78vw,390px);max-height:120px;margin:0 auto;object-position:center}
@@ -762,7 +762,7 @@ footer { margin-top:0; }
       .event-hub-actions .shadow-start-button,.event-hub-actions #shadow-exit-button{font-size:12px;padding:10px 12px}
     }
 
-    /* SHADOW RISES stats only: two top panels, Level centered below. */
+    /* SHADOW RISES stats. */
     .shadow-stats{
       display:grid !important;
       grid-template-columns:repeat(2,minmax(0,1fr)) !important;
@@ -817,7 +817,7 @@ footer { margin-top:0; }
     }
 
 
-    /* Official Announcement: vertical banner list; Home banner styles remain untouched. */
+    /* Official Announcement. */
     .official-announcement-wrap{width:min(900px,92vw);margin:24px auto 0}
     .official-announcement-stage{position:relative;width:100%;display:grid;gap:18px;overflow:visible;border:0;border-radius:0;background:transparent;box-shadow:none}
     .official-announcement-track{display:grid;width:100%;height:auto;gap:18px;transition:none;will-change:auto}
@@ -837,7 +837,7 @@ footer { margin-top:0; }
     .official-announcement-admin .status-pill.off{background:#48232a;color:#ff9eaa}
     @media(max-width:650px){.official-announcement-wrap{width:100%}.official-announcement-stage{border-radius:12px}.official-announcement-admin{padding:15px!important}}
 
-/* Official Announcement layout correction only: centered, contained vertical stack. */
+/* Official Announcement layout. */
 #official-announcement-view {
   width:100%; max-width:100%; min-width:0; overflow-x:clip; box-sizing:border-box;
 }
@@ -879,8 +879,8 @@ footer { margin-top:0; }
 }
 
 
-/* WORLD ENVY GLOBAL SOCIAL CHAT — additive styles */
-/* Sidebar account stays at the bottom of the available device height. */
+/* WORLD ENVY GLOBAL SOCIAL CHAT */
+/* Sidebar AKUN. */
 #site-sidebar .sidebar-account-lock{position:relative;margin:auto 4px 4px;flex:0 0 auto;isolation:isolate}
 #site-sidebar .sidebar-account{position:relative;margin:22px 0 0;padding:14px 11px;border-top:1px solid #49365f;background:#171222;border-radius:12px;min-height:88px;box-sizing:border-box}
 #site-sidebar .sidebar-locked-item{position:relative;isolation:isolate;margin:5px 0;border-radius:10px;overflow:hidden}
@@ -935,7 +935,7 @@ footer { margin-top:0; }
 @media(max-width:650px){.social-chat-auth-grid{grid-template-columns:1fr}.social-chat-card{padding:14px}.social-chat-feed{max-height:60vh}.social-chat-message{padding:10px}.social-chat-title{font-size:21px}}
 
 
-/* WORLD ENVY: Social Chat and Community Account are separate paused pages. */
+/* WORLD ENVY: Social Chat */
 #site-sidebar .sidebar-account{position:relative;margin:auto 4px 4px;padding:14px 11px;border-top:1px solid #49365f;background:#171222;border-radius:12px;min-height:88px;box-sizing:border-box;flex:0 0 auto}
 #site-sidebar .sidebar-account-label{font-size:11px;letter-spacing:1px;color:#bca5d8;font-weight:800;margin-bottom:9px}
 #site-sidebar .sidebar-account button{width:100%;margin-top:7px;padding:10px 11px;border:1px solid #7650a4;border-radius:9px;background:#21172f;color:#f0eafb;font-weight:700;cursor:pointer}
@@ -1050,7 +1050,7 @@ footer{color:#333!important;border-top-color:var(--line-blue)!important}
 #spin-wheel-view .shattered-card-art{border-color:var(--navy)!important;box-shadow:0 14px 34px #0b2a5b40!important}
 #spin-wheel-view .shattered-card-enter{background:var(--tint-2)!important;border-color:var(--navy)!important;color:var(--ink)!important;box-shadow:none!important}
 
-/* ===== CLAN TOWER — event hijau dengan efek air terjun (kartu gelap seperti kartu Shadow Rises) ===== */
+/* ===== CLAN TOWER — event hijau dengan efek air terjun () ===== */
 .tower-card{position:relative;isolation:isolate;overflow:hidden;max-width:850px;min-height:220px;margin-top:22px;border:1px solid #2f8f5b;border-radius:18px;background:linear-gradient(120deg,#03110a 5%,#0a3322 45%,#115c3a 72%,#06180f);box-shadow:0 16px 42px #0007,0 0 24px #34d39926;color:#ecfdf3}
 .tower-card::after{content:"";position:absolute;z-index:-1;left:0;right:0;bottom:-10px;height:74px;background:linear-gradient(0deg,#d1fae5bb,transparent);filter:blur(7px);animation:towerMist 5s ease-in-out infinite alternate;pointer-events:none}
 .tower-card-content{position:relative;z-index:1;padding:28px;max-width:650px}
@@ -1094,7 +1094,7 @@ footer{color:#333!important;border-top-color:var(--line-blue)!important}
 @media(max-width:560px){.tower-card-content{padding:22px 18px}.tower-game-top{align-items:flex-start}.tower-btn{font-size:12px;padding:10px 12px}}
 @media(prefers-reduced-motion:reduce){.tower-fall i,.tower-card::after,.tower-status-dot,.tower-toast.show{animation:none}.tower-toast.show{opacity:1}}
 
-/* ===== GABUNG PERINGKAT — kartu hitam/abu/putih dengan efek glitch ===== */
+/* ===== GABUNG PERINGKAT — kartu hitam/abu/putih efek glitch ===== */
 .mg-card{position:relative;isolation:isolate;overflow:hidden;max-width:850px;min-height:220px;margin-top:22px;border:1px solid #6b6b6b;border-radius:18px;background:linear-gradient(120deg,#030303 5%,#141414 45%,#262626 72%,#0a0a0a);box-shadow:0 16px 42px #0008,0 0 24px #ffffff12;color:#f2f2f2}
 .mg-card::before,.mg-game::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.045) 0 1px,transparent 1px 3px);animation:mgFlicker 3s steps(2,end) infinite}
 .mg-card::after{content:"";position:absolute;z-index:-1;left:0;right:0;top:-90px;height:90px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.1),transparent);animation:mgScan 4.5s linear infinite;pointer-events:none}
